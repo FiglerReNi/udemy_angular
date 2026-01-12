@@ -1,4 +1,7 @@
 import { Component, Input, Output, EventEmitter, computed, signal, input, output } from '@angular/core';
+import { User } from './user.model';
+import {CardComponent} from '../shared/card/card-component';
+// import { type User } from './user.model';
 // import { DUMMY_USERS } from '../dummy-users';
 
 // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
@@ -9,20 +12,24 @@ import { Component, Input, Output, EventEmitter, computed, signal, input, output
 //   name: string;
 // }
 
-interface User {
-  id: string;
-  avatar: string;
-  name: string;
-}
+// interface User {
+//   id: string;
+//   avatar: string;
+//   name: string;
+// }
 
 @Component({
   selector: 'app-user',
   standalone: true,
   templateUrl: './user.component.html',
+  imports: [
+    CardComponent
+  ],
   styleUrl: './user.component.css'
 })
 export class UserComponent {
   @Input({required: true}) user!: User;
+  @Input({required:true}) selected!: boolean;
   // @Input({required: true}) user!: {
   //   id: string;
   //   avatar: string;
