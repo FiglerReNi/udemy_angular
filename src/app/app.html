@@ -8,42 +8,10 @@
           [user]="user" (select)="onSelectUser($event)" [selected]="user.id === selectedUserId"/>
       </li>
     }
-<!--    <li *ngFor="let user of users">-->
-<!--      <app-user-->
-<!--        [user]="user" (select)="onSelectUser($event)"/>-->
-<!--    </li>-->
-<!--    <li>-->
-<!--      <app-user-->
-<!--        [user]="users[0]" (select)="onSelectUser($event)"/>-->
-<!--&lt;!&ndash;        [avatar]="users[0].avatar" [name]="users[0].name" [id]="users[0].id"&ndash;&gt;-->
-<!--    </li>-->
-<!--    <li>-->
-<!--      <app-user-->
-<!--        [user]="users[1]" (select)="onSelectUser($event)"/>-->
-<!--&lt;!&ndash;        [avatar]="users[1].avatar" [name]="users[1].name" [id]="users[1].id" &ndash;&gt;-->
-<!--    </li>-->
-<!--    <li>-->
-<!--      <app-user-->
-<!--        [user]="users[2]" (select)="onSelectUser($event)"/>-->
-<!--&lt;!&ndash;        [avatar]="users[2].avatar" [name]="users[2].name" [id]="users[2].id" &ndash;&gt;-->
-<!--    </li>-->
-<!--    <li>-->
-<!--      <app-user-->
-<!--        [user]="users[3]" (select)="onSelectUser($event)"/>-->
-<!--&lt;!&ndash;        [avatar]="users[3].avatar" [name]="users[3].name" [id]="users[3].id" &ndash;&gt;-->
-<!--    </li>-->
   </ul>
-  <!-- ? ha létezik az objektum, akkor vegye a .name értékét, ha nem undefined-et ad vissza
-  <app-task [name]="selectedUser?.name"/>
-  -->
   @if (selectedUser) {
     <app-tasks [name]="selectedUser.name" [userId]="selectedUser.id"/>
   } @else {
     <p id="fallback">Select a user to see their tasks!</p>
   }
-<!--  <app-task *ngIf="selectedUser; else elseBlock" [name]="selectedUser!.name"/>-->
-<!--  <ng-template #elseBlock>-->
-<!--    <p id="fallback">Select a user to see their tasks!</p>-->
-<!--  </ng-template>-->
-<!--  <app-task [name]="selectedUser ? selectedUser.name : ''"/>-->
 </main>
