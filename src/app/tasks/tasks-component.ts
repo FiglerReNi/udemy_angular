@@ -57,10 +57,10 @@ export class TasksComponent {
     return this.tasksService.getUserTasks(this.userId);
   }
 
-  onCompleteTask(id: string) {
-    // this.tasks = this.tasks.filter(task => task.id !== id)
-    this.tasksService.removeTask(id);
-  }
+  // onCompleteTask(id: string) {
+  //   // this.tasks = this.tasks.filter(task => task.id !== id)
+  //   this.tasksService.removeTask(id);
+  // }
 
   onStartAddTask() {
     this.isAddingTask = true;
