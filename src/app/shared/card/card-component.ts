@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  standalone: false,
+  // imports: [],
   templateUrl: './card-component.html',
   styleUrl: './card-component.css'
 })
