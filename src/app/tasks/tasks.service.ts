@@ -45,7 +45,12 @@ export class TasksService {
   addTask(taskData: NewTaskData, userId: string) {
     this.tasks.unshift({
       id: new Date().getTime().toString(),
-      userId: '',
+      // A hibát böngésző fev tool-al tudjuk debugolni: Sources fül, src mappa és itt tudunk breakpointokat rakni
+      // van chroome kiegészítő is: angular dev tool néven:
+      // https://chromewebstore.google.com/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh
+      // https://angular.dev/tools/devtools
+      // userId: '',
+      userId: userId,
       title: taskData.title,
       summary: taskData.summary,
       dueDate: taskData.date,
