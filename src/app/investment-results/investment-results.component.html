@@ -1,4 +1,5 @@
 @if (!results()) {
+<!--@if (!results) {-->
   <p class="center">Please enter some values, and press "Calculate"</p>
 } @else {
   <table>
@@ -12,7 +13,9 @@
     </tr>
     </thead>
     <tbody>
+<!--    signal verzió-->
       @for (result of results(); track result.year) {
+<!--      @for (result of results; track result.year) {-->
         <tr>
           <td>{{ result.year }}</td>
 <!--          <td>{{ result.valueEndOfYear | currency:"HUF" }}</td>-->
