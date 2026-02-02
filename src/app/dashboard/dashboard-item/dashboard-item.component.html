@@ -1,0 +1,12 @@
+<!--Itt is bonyolult a DOM a div miatt, mert ahol meghívjuk ezt a komponenst ott az már eleve ad egy
+keretet az app-dashboard-item lesz a host, ha ez alá még beteszünk egy wrappert, akkor az csak feles-
+legesen bonyolítja a Dom szerkezetet-->
+<!--<div class="dashboard-item">-->
+  <article>
+    <header>
+      <img [src]="image().src" [alt]="image().alt" />
+      <h2>{{ title() }}</h2>
+    </header>
+    <ng-content />
+  </article>
+<!--</div>-->

@@ -1,0 +1,15 @@
+<!-- Itt a p elem felesleges, mert ezt a komponenst más helyeken használjuk a selectorával.
+És az ad egy app-control keretet a dom-ban (ez lesz a host), ha bent hagyjuk a p-t,
+akkor feleslegesen alábontjuk a Dom-ot és bonyolultabb lesz a szerkezete.-->
+<!--<p class="control">-->
+<!--&lt;!&ndash;  mivel signal, kell a ()&ndash;&gt;-->
+<!--  <label>{{ label() }}</label>-->
+<!--&lt;!&ndash;  it megadhatom milyen elemeket fogadok el a contenten belül&ndash;&gt;-->
+<!--  <ng-content select="input, textarea"/>-->
+<!--</p>-->
+
+<!--Kivettük a p-t, egyszerűbb lesz a DOM, így viszont a style nem fog érvényesülni, mert sehol nem használuk a
+control class-t, viszont a css-ben ha kicseréljük host-ra akkor az app-control selectorral meghívott elemek-
+nél fog érvényesülni.-->
+<label>{{ label() }}</label>
+<ng-content select="input, textarea"/>

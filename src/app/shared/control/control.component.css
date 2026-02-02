@@ -1,0 +1,32 @@
+.control label {
+/*:host label {*/
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+  color: #4f4b53;
+}
+/*Itt mivel a html központosított és sok helyen használható, dinamikus - ng-content-et használunk,
+ami input és textarea mezőt kaphat. Viszont az ng-content az alapból nem input, csak később válik azzá.
+Az angular alap beállítása szerint a .css csak és kizárólag az adott html-re vonatkozik, a megíráskor.
+Ez az encapsulation, ami alapbeállítás. Ezt ki lehet kapcsolni a .ts file-ban és így arra fog érvénye-
+sülni a css, ami a tényleges dom/html elem lesz*/
+.control input,
+.control textarea {
+/*ha ezt a :host megoldást használjuk, mert a p-t kivesszük a html-ben és nem lesz control class, akkor
+viszont kell az encapsulation, mert a :host azzal működik, viszont a fentiek miatt nem vehetjük ki az encapsulation
+none-t, mert akkor az ng-content helyére kerülő input/textarea-t nem fogja látni a css, ezért a használat helyén módosítunk
+és az app-control-nak adunk egy class=control attributumot és így látni fogja ezt a css-t. Ezzel a megoldással az a gond, hogy
+mindenhová ahol app-control-t használok hozzá kell adni a class-t és ez duplikáció lesz. Ezért van lehetőség a control.css-ben
+host konfigurációt megadni*/
+/*:host input,*/
+/*:host textarea {*/
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 0.9rem;
+    color: #4f4b53;
+}
+

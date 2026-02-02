@@ -1,0 +1,35 @@
+<!--Ez az egyik módszer, de így a dev toolban a szerkezetnél a DOM esetében lehetnek duplikációk,
+ha wrapper-be rakjuk a buttont és úgy húzzuk be máshová.
+Sokkal jobb út a meglévő button elemet (amit angular alapból ad, csak kiterjeszteni). Így a
+DOM sokkal olvashatóbb lesz, mert eltűnik a wrapper-->
+<!--<button>-->
+<!--  <span>Logout</span>-->
+<!--  <span class="icon">→</span>-->
+<!--</button>-->
+
+<!--<span>Logout</span>-->
+<!--<span class="icon">→</span>-->
+
+<!--Ebben az esetben így is működik de a felirat és az ikon is a második ng-content-be kerül,
+mert az angular nem tudja mi hová tartozik-->
+<!--<span><ng-content /></span>-->
+<!--<span class="icon"><ng-content /></span>-->
+
+<!--A DOM szerkezet ezzel a megoldással a legegyszerűbb és átláthatóbb-->
+<!--<span><ng-content /></span>-->
+<!--<ng-content select=".icon"/>-->
+
+<!--Ilyenkor a használat helyén az ngProjectAs attribútumot használjuk és annak a névnek kell
+a select után lévővel matchelnie-->
+<!--<span><ng-content /></span>-->
+<!--<span class="icon"><ng-content select="icon"/></span>-->
+
+<!--A legújabb verziókban két ng-content közé tehetünk default szöveget, amit akkor jelenít meg,
+ha semmit nem talál a content helyére (fallback content)-->
+<!--Itt a külső elem lesz button, ezért a .css nem fog így egyszerűen hatni rá. :host-al a css-ben tudjuk
+elérni azt, hogy ott hasson a css, ahol a selectorral meg van hívva a component.
+Nálunk az appButton volt a selector és pl a header-ben egy button elemen használjuk-->
+<span><ng-content /></span>
+<span class="icon">
+  <ng-content select="icon"> → </ng-content>
+</span>
