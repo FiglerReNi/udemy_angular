@@ -1,12 +1,48 @@
-<div id="status">
-  @if (currentStatus === 'online') {
-    <p>Servers are online</p>
-    <p>All systems are operational.</p>
-  } @else if (currentStatus === 'offline') {
-    <p>Servers are offline</p>
-    <p>Functionality should be restored soon.</p>
-  } @else {
-    <p>Server status is unknown</p>
-    <p>Fetching server status failed.</p>
-  }
+<!--<div id="status">-->
+<!--  @if (currentStatus === 'online') {-->
+<!--    <p>Servers are online</p>-->
+<!--    <p>All systems are operational.</p>-->
+<!--  } @else if (currentStatus === 'offline') {-->
+<!--    <p>Servers are offline</p>-->
+<!--    <p>Functionality should be restored soon.</p>-->
+<!--  } @else {-->
+<!--    <p>Server status is unknown</p>-->
+<!--    <p>Fetching server status failed.</p>-->
+<!--  }-->
+<!--</div>-->
+
+<!--A currentstatus értékétől fogg függni, hogy a status class érvényesül e vagy sem-->
+<!--<div [class.status]="currentStatus === 'offline'">-->
+<!--@if (currentStatus === 'online') {-->
+<!--  <p>Servers are online</p>-->
+<!--  <p>All systems are operational.</p>-->
+<!--} @else if (currentStatus === 'offline') {-->
+<!--  <p>Servers are offline</p>-->
+<!--  <p>Functionality should be restored soon.</p>-->
+<!--} @else {-->
+<!--  <p>Server status is unknown</p>-->
+<!--  <p>Fetching server status failed.</p>-->
+<!--}-->
+<!--</div>-->
+
+<div [class]="{
+  status: true,
+  'status-online': currentStatus === 'online',
+  'status-offline': currentStatus === 'offline',
+  'status-unknown': currentStatus === 'unknown'}">
+<!--     [style.fontSize]="'32px'">-->
+<!--    [style]="{-->
+<!--    fontSize: '32px'-->
+<!--    }">-->
+<!--  'font-size':'32px'-->
+@if (currentStatus === 'online') {
+  <p>Servers are online</p>
+  <p>All systems are operational.</p>
+} @else if (currentStatus === 'offline') {
+  <p>Servers are offline</p>
+  <p>Functionality should be restored soon.</p>
+} @else {
+  <p>Server status is unknown</p>
+  <p>Fetching server status failed.</p>
+}
 </div>

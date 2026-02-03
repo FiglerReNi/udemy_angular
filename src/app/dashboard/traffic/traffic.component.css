@@ -1,5 +1,6 @@
 
-#traffic {
+/*#traffic {*/
+:host {
   display: block;
   width: 15rem;
 }
@@ -27,7 +28,8 @@ p {
 }
 
 @media (min-width: 768px) {
-  #traffic {
+  /*#traffic {*/
+  :host {
     width: 20rem;
   }
 }
