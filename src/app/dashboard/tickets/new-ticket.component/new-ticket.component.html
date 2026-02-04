@@ -1,17 +1,27 @@
 <!--form, buttons esetén, amik nem csak tárolók, hanem plusz jelentésük is van a DOM számára nem szoktunk
 szerkezetet egyszerűsíteni és a host-ot használni tárolónak/wrappernek, mert ezek fontosak-->
 
-<form>
+<!--<form (ngSubmit)="onSubmit()">-->
+<!--<form (ngSubmit)="onSubmit(titleInput)">-->
+<!--<form #form (ngSubmit)="onSubmit(titleInput.value, textInput.value, form)">-->
+<form #form (ngSubmit)="onSubmit(titleInput.value, textInput.value)">
 <!--  <app-control class="control" label="Title">-->
-  <app-control label="Title">
-    <input name="title" id="title" />
+<!--  mivel saját komponens és nem alap html element, ezért a #-os változat itt is a componentet adja vissza-->
+  <app-control label="Title" #lbl>
+<!--    <input name="title" id="title" [(ngModel)]="title"/>-->
+<!--    A #-jellel egy html elemet rakhatunk egy változóba-->
+    <input name="title" id="title" #titleInput/>
   </app-control>
 <!--  <app-control class="control" label="Request">-->
   <app-control label="Request">
-    <textarea name="request" id="request" rows="3"></textarea>
+    <textarea name="request" id="request" rows="3" #textInput></textarea>
   </app-control>
   <p>
-    <button appButton>
+<!--    <button #btn>-->
+<!--    ha custom attríbutumot rakok a button elemre, akkor a #-os megoldás nem a html elemet fogja
+        visszaadni, hanem egy ButtonComponent-et, de ha leszedjük a saját attribútumunk, akkor html
+        elemet ugyanúgy-->
+    <button appButton #btn>
       Submit <span ngProjectAs="icon"> → </span>
 <!--      <span>Submit</span>-->
 <!--      <span class="icon"> → </span>-->

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, DestroyRef, inject, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-server-status',
@@ -7,9 +7,12 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
   templateUrl: './server-status.component.html',
   styleUrl: './server-status.component.css',
 })
+// export class ServerStatusComponent implements OnInit, AfterViewInit, OnDestroy {
 export class ServerStatusComponent implements OnInit, AfterViewInit {
   // currentStatus = 'offline';
   currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
+  private interval?: ReturnType<typeof setInterval>;
+  private destroyRef = inject(DestroyRef)
 
   constructor() {
     /*akkor fut amikor létrejön a komponens példánya az egyik legelső lépés. Olyat rajókunk ebbe, ami nem függ
@@ -33,7 +36,9 @@ export class ServerStatusComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     console.log('on init');
-    setInterval(() => {
+    // egyfajta azonosítóval tér vissza, amit törlésnél használhatunk
+    // this.interval = setInterval(() => {
+    const intervalToDestroyRef = setInterval(() => {
       const rnd = Math.random(); // 0 - 0.99999
       if(rnd < 0.5) {
         this.currentStatus = 'online';
@@ -43,11 +48,20 @@ export class ServerStatusComponent implements OnInit, AfterViewInit {
         this.currentStatus = 'unknown';
       }
     }, 5000);
+
+    // ez az újabb verziója az ngDestroy-nak
+    this.destroyRef.onDestroy(() => clearInterval(intervalToDestroyRef));
   }
 
   ngAfterViewInit(): void {
     console.log('after view init');
   }
+
+  // ngOnDestroy(): void {
+    // mielőtt megszűnne a komponens teljesen, az előtt fut le, így előtte tudunk tisztításokat csinálni
+    // pl a timer tovább futhat a háttérben miután már megszűnt a komponens, memória problémákat okozhat
+  //   clearInterval(this.interval);
+  // }
 
 
 }
