@@ -12,4 +12,6 @@ akkor feleslegesen alábontjuk a Dom-ot és bonyolultabb lesz a szerkezete.-->
 control class-t, viszont a css-ben ha kicseréljük host-ra akkor az app-control selectorral meghívott elemek-
 nél fog érvényesülni.-->
 <label>{{ label() }}</label>
+<!--ng-content esetén a @ViewChild nem használható, mert ez nem része a template-nek, hanem egy placeholder,
+ami majd nem lesz benne a véglegesben. A @ViewChild csak azt látja ami ténylegesen része a html template-nek-->
 <ng-content select="input, textarea"/>

@@ -1,4 +1,12 @@
-import {AfterViewInit, Component, DestroyRef, inject, OnDestroy, OnInit} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  DestroyRef, effect,
+  inject,
+  OnDestroy,
+  OnInit,
+  signal
+} from '@angular/core';
 
 @Component({
   selector: 'app-server-status',
@@ -10,7 +18,8 @@ import {AfterViewInit, Component, DestroyRef, inject, OnDestroy, OnInit} from '@
 // export class ServerStatusComponent implements OnInit, AfterViewInit, OnDestroy {
 export class ServerStatusComponent implements OnInit, AfterViewInit {
   // currentStatus = 'offline';
-  currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
+  // currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
+  currentStatus = signal<'online' | 'offline' | 'unknown'>('offline');
   private interval?: ReturnType<typeof setInterval>;
   private destroyRef = inject(DestroyRef)
 
@@ -32,7 +41,25 @@ export class ServerStatusComponent implements OnInit, AfterViewInit {
     //     this.currentStatus = 'unknown';
     //   }
     // }, 5000);
-  }
+    // így csak kiírja az első állapotát a konzolra, de a változasokat nem
+    console.log(this.currentStatus());
+    // ezzel mindig új logot csinál, ha vátozik az érték
+    // effect(() => console.log(this.currentStatus()));
+    // az onCleanUp-al megmondhatjuk, hogy mi történjen minden futás előtt pl itt töröljük az időzítót
+    // effect((onCleanup) => {
+    //   const timer = setTimeout(() => {
+    //     console.log('timer ended');
+    //   }, 1000);
+    //   onCleanup(() => {
+    //     clearTimeout(timer);
+    //   });
+    // });
+    effect((onCleanup) => {
+      console.log(this.currentStatus())
+      onCleanup(() => {
+        console.log('cleanup');
+      });
+    });  }
 
   ngOnInit(): void {
     console.log('on init');
@@ -41,11 +68,14 @@ export class ServerStatusComponent implements OnInit, AfterViewInit {
     const intervalToDestroyRef = setInterval(() => {
       const rnd = Math.random(); // 0 - 0.99999
       if(rnd < 0.5) {
-        this.currentStatus = 'online';
+        // this.currentStatus = 'online';
+        this.currentStatus.set('online');
       } else if (rnd < 0.9) {
-        this.currentStatus = 'offline';
+        // this.currentStatus = 'offline';
+        this.currentStatus.set('offline');
       } else {
-        this.currentStatus = 'unknown';
+        // this.currentStatus = 'unknown';
+        this.currentStatus.set('unknown');
       }
     }, 5000);
 
