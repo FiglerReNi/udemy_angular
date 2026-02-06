@@ -1,0 +1,28 @@
+<main>
+<!--  <app-learning-resources appLog/>-->
+  <app-learning-resources/>
+
+  <hr/>
+
+<!--  <app-auth appLog/>-->
+  <app-auth/>
+<!--  Az újabb verziókban már egy template feature lett a direktíva helyett-->
+<!--  @if (isAdmin()) {-->
+<!--    <p>Only admins should see this!</p>-->
+<!--  }-->
+<!--  ngIf: direktíva (struktural directives - A DOM szerkezetét módosítja, mert vagy belekerül a <p> elem
+        vagy nem)-->
+<!--    <p *ngIf="isAdmin()"  >Only admins should see this!</p>-->
+
+<!--    <p appAuth="admin"  >Only admins should see this!</p>-->
+
+<!--  A structural direktiváknak (ezek előtt mindig van *) szükségük van egy template wrapper-re a működésükhöz.
+    az angular a * jellel jelzi, hogy generál ilyet és így automatikusan tartalmaznak ilyet. Ha kézzel csinálunk ng-template-t,
+    ott nem kell az ngIf elé sem a csillag, hiszen nem kell az automatikus template. A custom directive változatok ugyanígy működnek-->
+<!--  <ng-template appAuth="admin">-->
+<!--    <p>Only admins should see this!</p>-->
+<!--  </ng-template>-->
+  <p *appAuth="'admin'" appLog class="protected-content admin">Only admins should see this!</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">Regular users should see this!</p>
+  <p *appAuth="'guest'" class="protected-content authenticated">Guest users should see this!</p>
+</main>
