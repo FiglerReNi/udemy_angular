@@ -9,7 +9,7 @@ import {Ticket} from "../ticket.model";
 })
 export class TicketComponent {
   // @Input({}) ...
-  // data = input.required<Ticket>()
+  data = input.required<Ticket>()
   // data = input.required<Ticket>({alias: 'ticketData'})
   detailsVisible = signal(false)
   close = output();
