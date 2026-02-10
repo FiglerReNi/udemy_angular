@@ -2,17 +2,19 @@ import {Component, computed, inject, input} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {Task, TASK_STATUS_OPTIONS, TaskStatus} from '../../task.model';
 import {TasksService} from "../../tasks.service";
-import {TaskServiceToken} from "../../../../main";
+import {TasksServiceToken} from "../../../app.module";
+// import {TaskServiceToken} from "../../../../main";
 
 @Component({
   selector: 'app-task-item',
-  standalone: true,
-  imports: [FormsModule],
+  // standalone: true,
+  standalone: false,
+  // imports: [FormsModule],
   templateUrl: './task-item.component.html',
   styleUrl: './task-item.component.css',
 })
 export class TaskItemComponent {
-  private tasksService = inject(TaskServiceToken);
+  private tasksService = inject(TasksServiceToken);
   taskStatusOptions = inject(TASK_STATUS_OPTIONS);
   // private tasksService = inject(TasksService);
   task = input.required<Task>();

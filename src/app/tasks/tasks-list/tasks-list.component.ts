@@ -1,27 +1,29 @@
 import {Component, computed, inject, signal} from '@angular/core';
 
-import {TaskItemComponent} from './task-item/task-item.component';
+// import {TaskItemComponent} from './task-item/task-item.component';
 import {TasksService} from "../tasks.service";
-import {TaskServiceToken} from "../../../main";
+// import {TaskServiceToken} from "../../../main";
+import {TasksServiceToken} from "../../app.module";
 import {TASK_STATUS_OPTIONS, TaskStatusOptions, taskStatusOptionsProvider} from "../task.model";
 
 @Component({
   selector: 'app-tasks-list',
-  standalone: true,
+  // standalone: true,
+  standalone: false,
   templateUrl: './tasks-list.component.html',
   styleUrl: './tasks-list.component.css',
-  imports: [TaskItemComponent],
+  // imports: [TaskItemComponent],
   // nemcsak service-t húzhatunk be dependency injectionnal, hanem értékeket is pl.
   // ezt html elemekben használjuk fel itt
-  providers: [taskStatusOptionsProvider]
-  // providers: [{
-  //   provide: TASK_STATUS_OPTIONS,
-  //   useValue: TaskStatusOptions
-  // }]
+  // providers: [taskStatusOptionsProvider]
+  providers: [{
+    provide: TASK_STATUS_OPTIONS,
+    useValue: TaskStatusOptions
+  }]
 })
 export class TasksListComponent {
   // private tasksService = inject(TasksService);
-  private tasksService = inject(TaskServiceToken);
+  private tasksService: TasksService = inject(TasksServiceToken);
   private selectedFilter = signal<string>('all');
   taskStatusOptions = inject(TASK_STATUS_OPTIONS);
   // tasks = [];
@@ -30,15 +32,20 @@ export class TasksListComponent {
   tasks = computed(() => {
     switch (this.selectedFilter()) {
       case 'all':
-        return this.tasksService.allTasks();
+        // return this.tasksService.allTasks();
+        return this.tasksService.allTasks;
       case 'open':
-        return this.tasksService.allTasks().filter((task) => task.status === 'OPEN');
+        // return this.tasksService.allTasks().filter((task) => task.status === 'OPEN');
+        return this.tasksService.allTasks.filter((task) => task.status === 'OPEN');
       case 'in-progress':
-        return this.tasksService.allTasks().filter((task) => task.status === 'IN_PROGRESS');
+        // return this.tasksService.allTasks().filter((task) => task.status === 'IN_PROGRESS');
+        return this.tasksService.allTasks.filter((task) => task.status === 'IN_PROGRESS');
       case 'done':
-        return this.tasksService.allTasks().filter((task) => task.status === 'DONE');
+        // return this.tasksService.allTasks().filter((task) => task.status === 'DONE');
+        return this.tasksService.allTasks.filter((task) => task.status === 'DONE');
       default:
-        return this.tasksService.allTasks();
+        // return this.tasksService.allTasks();
+        return this.tasksService.allTasks;
     }
   });
 

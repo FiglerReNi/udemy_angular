@@ -13,10 +13,25 @@ export class TasksService {
   // writeable signal, de ezt nem akarjuk hagyni csak a new Task-ben, ahol újat hozunk létre
   // tasks = signal<Task[]>([]);
   // a private miatt csak ebben a template-ben használható, ahové injectáljuk a service-t ott nem
-  private tasks = signal<Task[]>([]);
+  // private tasks = signal<Task[]>([]);
   private loggingService = inject(LoggingService);
   // ez meghívható kívülről, de nem írható csak olvasható (kb mint egy getter)
-  allTasks = this.tasks.asReadonly();
+  // allTasks = this.tasks.asReadonly();
+  private tasks: Task[] = [];
+
+  get allTasks() {
+    return [...this.tasks];
+  }
+
+  // addTask(taskData: { title: string, description: string }) {
+  //   const newTask: Task = {
+  //     ...taskData,
+  //     id: Math.random().toString(),
+  //     status: 'OPEN'
+  //   }
+  //   this.tasks.update((oldTasks) => [...oldTasks, newTask]);
+  //   this.loggingService.log('Added task with title: ' + taskData.title);
+  // }
 
   addTask(taskData: { title: string, description: string }) {
     const newTask: Task = {
@@ -24,13 +39,17 @@ export class TasksService {
       id: Math.random().toString(),
       status: 'OPEN'
     }
-    this.tasks.update((oldTasks) => [...oldTasks, newTask]);
+    this.tasks = [...this.tasks, newTask];
     this.loggingService.log('Added task with title: ' + taskData.title);
   }
 
+  // updateTaskStatus(taskId: string, newStatus: TaskStatus){
+  //   this.tasks.update((oldTasks) => oldTasks.map((task) => task.id === taskId ? {...task, status: newStatus} : task));
+  //   this.loggingService.log('Change task status to: ' + newStatus);
+  // }
+
   updateTaskStatus(taskId: string, newStatus: TaskStatus){
-    this.tasks.update((oldTasks) => oldTasks.map((task) => task.id === taskId ? {...task, status: newStatus} : task));
+    this.tasks = this.tasks.map((task) => task.id === taskId ? {...task, status: newStatus} : task);
     this.loggingService.log('Change task status to: ' + newStatus);
   }
-
 }
