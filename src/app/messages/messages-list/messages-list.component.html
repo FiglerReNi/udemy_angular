@@ -1,0 +1,12 @@
+<ul>
+<!--  @for (message of messages(); track message) {-->
+<!--  @for (message of messages; track message) {-->
+<!--  automatikusan megcsinálja a feliratkozást a servic.ts-ben lévőkre (nem kell az ngOninit és a többi cucc
+      a .ts-be mint ezelőtt) és ki is olvassa az értékeket, triggereli a change detection-t így a felületen is
+      változik a kinézet-->
+  @for (message of messages$ | async; track message) {
+    <li>{{ message }}</li>
+  }
+</ul>
+
+<p class="debug-output">{{ debugOutput }}</p>
