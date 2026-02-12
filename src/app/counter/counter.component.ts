@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component, inject, NgZone, OnInit, signal} from '@angular/core';
-
 import { InfoMessageComponent } from '../info-message/info-message.component';
 
 @Component({
@@ -12,19 +11,14 @@ import { InfoMessageComponent } from '../info-message/info-message.component';
 })
 export class CounterComponent implements OnInit{
   private zone = inject(NgZone);
+  // a számláló működne signal nélkül is, mert egy click evet módosítja, amit lát az angular
   count = signal(0);
 
   ngOnInit() {
+    // itt viszont signal nélkül nem történne változás, mert a timert a zone.js érzékeli, de az angular
+    // nem indít rá change detectiont
     setTimeout(() => {this.count.set(0)} , 4000);
-    // ez egy olyan eset amikor nem kellene lefutnia a change detection-nek, mert nem változatat ez az
-    // időzítő semmin sehol, csak logot ír ki, de a zone.js az időzítő lejártát eseménynek érzékeli, és szól
-    // az angulárnak, hogy végezze újra az ellenőrzést és ezért ez után a kód után újra fut.
     setTimeout(() => {console.log('Timer expired!')} , 5000);
-    // ezzel ki lehet kapcsolni erre a kódra, hogy a zone.js figyelje
-    this.zone.runOutsideAngular(() => {
-      setTimeout(() => {console.log('Timer expired!')} , 5000);
-    })
-
   }
   get debugOutput() {
     console.log('[Counter] "debugOutput" binding re-evaluated.');
