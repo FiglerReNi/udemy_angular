@@ -1,0 +1,62 @@
+<!--Template-driven form-->
+<!--Az ngForm egy típust határoz meg, ebbe kerülnek bele az ngModel-el regisztrált elemek, és ezen keresztül érjük el
+nem csak a beregisztrált elemeket, hanem az egész Angular által kezelt formot.-->
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <h2>Login</h2>
+
+  <div class="control-row">
+    <div class="control no-margin">
+      <label for="email">Email</label>
+      <!--      Ebben az esetben nem használnk two-way-bindingot az ngModelnél. Ilyenkor a name attribute
+                mindig kell, mert így tudja az ngModel ezt az elemet beregisztrálni a angularba, form elemen belül
+                lehet használni-->
+<!--      Az input email mezőt nem csak a form-on belül regisztráljuk, hanem ezzel a template variable-val
+          ezt az objektumot a #email-ben is regisztráljuk-->
+      <input #email="ngModel"
+        id="email"
+        type="email"
+        name="email"
+        ngModel
+        required
+        email/>
+    </div>
+
+    <div class="control no-margin">
+      <label for="password">Password</label>
+      <input #password="ngModel"
+        id="password"
+        type="password"
+        name="password"
+        ngModel
+        required
+        minlength="6">
+      <!--    min, max, maxlength, pattern="" >7-->
+    </div>
+
+    <button class="button">Login</button>
+  </div>
+<!--  Ez a megoldás az elején hibát dob, mert amikor először betölt az oldal akkor a form még nincs
+teljesen készen és nincsenek beregisztrálna az ngModel mezők sem-->
+<!--  @if (form.form.touched && form.form.invalid) {-->
+<!--  @if (form.form.controls["email"].touched-->
+<!--  && form.form.controls["password"].touched-->
+<!--  && form.form.invalid) -->
+<!--  @if (email.touched && password.touched && form.form.invalid)-->
+<!--  {-->
+<!--    <p class="control-error">-->
+<!--      Invalid values detective. Please check your input.-->
+<!--    </p>-->
+<!--  }-->
+  @if (email.touched && email.dirty && email.invalid)
+  {
+    <p class="control-error">
+      Invalid email address entered.
+    </p>
+  }
+  @if (password.touched && password.dirty && password.invalid)
+  {
+    <p class="control-error">
+      Invalid password entered - must be at least 6 characters long.
+    </p>
+  }
+</form>
