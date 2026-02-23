@@ -1,7 +1,11 @@
-import {provideRouter} from "@angular/router";
+import {provideRouter, withComponentInputBinding, withRouterConfig} from "@angular/router";
 import {routes} from "./app.routes";
 import {ApplicationConfig} from "@angular/core";
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+  providers: [provideRouter(routes, withComponentInputBinding(),
+    // ezzel a child routuk is automatikusan megkapják a parent routban lévő változókat
+    withRouterConfig({
+    paramsInheritanceStrategy: 'always'
+  }))]
 }
