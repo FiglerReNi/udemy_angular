@@ -55,6 +55,7 @@ export class TasksService {
   }
 
   removeTask(id: string) {
+    console.log(id)
     this.tasks.update((prevTasks) =>
       prevTasks.filter((task) => task.id !== id)
     );
