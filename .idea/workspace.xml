@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55c5116f-ea4e-4f28-bd82-69ea32d67e74" name="Changes" comment="route-based lazy loading">
+      <change afterPath="$PROJECT_DIR$/user.routes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/angular-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/laptop-desk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/student.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/offer-preview/offer-preview.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/offer-preview/offer-preview.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/offer-preview/offer-preview.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/welcome/welcome.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/welcome/welcome.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/welcome/welcome.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="76" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="14.1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FiglerReNi&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="803febf7-c638-4094-bb52-251e6f2df294" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FiglerReNi/udemy_angular.git&quot;,
+    &quot;accountId&quot;: &quot;803febf7-c638-4094-bb52-251e6f2df294&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="38W58ZwYXiCumUraSpKbAKt3l5c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "15.0",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/figlerr/Saját/angular",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Angular CLI Server.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\figlerr\\Saját\\angular\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\figlerr\Saját" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55c5116f-ea4e-4f28-bd82-69ea32d67e74" name="Changes" comment="" />
+      <created>1768902327991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768902327991</updated>
+      <workItem from="1768902329202" duration="8672000" />
+      <workItem from="1769068948697" duration="5225000" />
+      <workItem from="1769421812579" duration="23091000" />
+      <workItem from="1769693483829" duration="37361000" />
+      <workItem from="1770043692304" duration="1106000" />
+      <workItem from="1770109171438" duration="6486000" />
+      <workItem from="1770119413903" duration="46590000" />
+      <workItem from="1770626164304" duration="11919000" />
+      <workItem from="1770712691830" duration="15794000" />
+      <workItem from="1770883719767" duration="29249000" />
+      <workItem from="1771233574070" duration="20977000" />
+      <workItem from="1771413103976" duration="66188000" />
+      <workItem from="1772098218122" duration="7164000" />
+      <workItem from="1772440384877" duration="15340000" />
+    </task>
+    <task id="LOCAL-00001" summary="working with modules">
+      <option name="closed" value="true" />
+      <created>1769419391302</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769419391302</updated>
+    </task>
+    <task id="LOCAL-00002" summary="practice">
+      <option name="closed" value="true" />
+      <created>1769437982742</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769437982742</updated>
+    </task>
+    <task id="LOCAL-00003" summary="practice">
+      <option name="closed" value="true" />
+      <created>1769678887636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769678887636</updated>
+    </task>
+    <task id="LOCAL-00004" summary="debug">
+      <option name="closed" value="true" />
+      <created>1769695644438</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769695644438</updated>
+    </task>
+    <task id="LOCAL-00005" summary="debug">
+      <option name="closed" value="true" />
+      <created>1769700670132</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1769700670132</updated>
+    </task>
+    <task id="LOCAL-00006" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770117392024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770117392024</updated>
+    </task>
+    <task id="LOCAL-00007" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770125684708</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1770125684708</updated>
+    </task>
+    <task id="LOCAL-00008" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770129169610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770129169610</updated>
+    </task>
+    <task id="LOCAL-00009" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770129478950</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770129478950</updated>
+    </task>
+    <task id="LOCAL-00010" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770211921738</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1770211921738</updated>
+    </task>
+    <task id="LOCAL-00011" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770303883310</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770303883310</updated>
+    </task>
+    <task id="LOCAL-00012" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770366996876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770366996876</updated>
+    </task>
+    <task id="LOCAL-00013" summary="components, templates - deep dive">
+      <option name="closed" value="true" />
+      <created>1770368495473</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770368495473</updated>
+    </task>
+    <task id="LOCAL-00014" summary="directives - deep dive">
+      <option name="closed" value="true" />
+      <created>1770383377753</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1770383377753</updated>
+    </task>
+    <task id="LOCAL-00015" summary="dependency injection - deep dive">
+      <option name="closed" value="true" />
+      <created>1770726395715</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1770726395716</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change detection wih zone.js - deep dive">
+      <option name="closed" value="true" />
+      <created>1770900462748</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1770900462748</updated>
+    </task>
+    <task id="LOCAL-00017" summary="change detection without zone.js - deep dive">
+      <option name="closed" value="true" />
+      <created>1770901546149</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1770901546149</updated>
+    </task>
+    <task id="LOCAL-00018" summary="rxjs - deep dive">
+      <option name="closed" value="true" />
+      <created>1770985919449</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1770985919449</updated>
+    </task>
+    <task id="LOCAL-00019" summary="observable &lt;-&gt; signal - deep dive">
+      <option name="closed" value="true" />
+      <created>1770987483183</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1770987483183</updated>
+    </task>
+    <task id="LOCAL-00020" summary="rxjs - deep dive">
+      <option name="closed" value="true" />
+      <created>1770988703038</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1770988703038</updated>
+    </task>
+    <task id="LOCAL-00021" summary="http request - deep dive">
+      <option name="closed" value="true" />
+      <created>1771243754732</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1771243754732</updated>
+    </task>
+    <task id="LOCAL-00022" summary="http request - deep dive">
+      <option name="closed" value="true" />
+      <created>1771504567322</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1771504567322</updated>
+    </task>
+    <task id="LOCAL-00023" summary="template driven form">
+      <option name="closed" value="true" />
+      <created>1771514056699</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1771514056699</updated>
+    </task>
+    <task id="LOCAL-00024" summary="reactive form">
+      <option name="closed" value="true" />
+      <created>1771592789550</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1771592789550</updated>
+    </task>
+    <task id="LOCAL-00025" summary="routers">
+      <option name="closed" value="true" />
+      <created>1771601691320</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1771601691320</updated>
+    </task>
+    <task id="LOCAL-00026" summary="routers">
+      <option name="closed" value="true" />
+      <created>1771844308942</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1771844308942</updated>
+    </task>
+    <task id="LOCAL-00027" summary="route-based lazy loading">
+      <option name="closed" value="true" />
+      <created>1772102173556</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1772102173556</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working with modules" />
+    <MESSAGE value="practice" />
+    <MESSAGE value="debug" />
+    <MESSAGE value="components, templates - deep dive" />
+    <MESSAGE value="directives - deep dive" />
+    <MESSAGE value="dependency injection - deep dive" />
+    <MESSAGE value="change detection wih zone.js - deep dive" />
+    <MESSAGE value="change detection without zone.js - deep dive" />
+    <MESSAGE value="observable &lt;-&gt; signal - deep dive" />
+    <MESSAGE value="rxjs - deep dive" />
+    <MESSAGE value="http request - deep dive" />
+    <MESSAGE value="template driven form" />
+    <MESSAGE value="reactive form" />
+    <MESSAGE value="routers" />
+    <MESSAGE value="route-based lazy loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="route-based lazy loading" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
