@@ -13,3 +13,6 @@ export class AppComponent {
     this.loadedFeature = feature;
   }
 }
+
+
+/*https://firebase.google.com/docs/reference/firebase-management/rest*/
