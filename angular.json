@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-signals": {
+    "ngrx-intro-standalone": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-signals",
+            "outputPath": "dist/ngrx-intro-standalone",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-signals:build:production"
+              "buildTarget": "ngrx-intro-standalone:build:production"
             },
             "development": {
-              "buildTarget": "angular-signals:build:development"
+              "buildTarget": "ngrx-intro-standalone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-signals:build"
+            "buildTarget": "ngrx-intro-standalone:build"
           }
         },
         "test": {
