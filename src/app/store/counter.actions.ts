@@ -21,3 +21,11 @@ export const decrement = createAction(
 // }
 //
 // export type CounterActions = IncrementAction;
+
+export const init = createAction(
+  '[Counter] Init');
+
+export const set = createAction(
+  '[Counter] Set',
+  props<{value: number}>()
+);

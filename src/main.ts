@@ -3,9 +3,11 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { provideStore } from '@ngrx/store';
 import { counterReducer } from './app/store/counter.reducer';
+import { provideEffects } from '@ngrx/effects';
+import { CounterEffects } from './app/store/counter.effects';
 
 bootstrapApplication(AppComponent, {
-    providers: [provideStore({counter: counterReducer})]
+    providers: [provideStore({ counter: counterReducer }), provideEffects([CounterEffects])]
 });
 
 /* Ha használjuk az ngrx-et az első lépés, hogy telepítéskor (ez egy külső library) létrehoz magának egy üres store-t.
@@ -22,6 +24,12 @@ Az action-t bele kell rakni a reducer-be, hogy minden értékváltozásról ért
 selectel a legújabb friss adatot tudjuk használni.
 A selec Observable-t ad vissza amire fel tudunk iratkozni a .html file-okban és így ezek a helyek is egyből lefrissülnek és
 up to datek lesznek
-
  */
-
+/*
+Effects:
+side effect-nek hívjuk az olyan eseményeket, amelyek nem közvetlenül a ui-t frissítik. Például a logírás,
+egy http request, vagy locakStorage-be írás. Ezeket nem írhatjuk a reducer-be, azok synchronous működésűek, egyszerűen
+és tisztán kell tartanunk őket.
+-> az ngrx-ben ezt oldjuk meg az effects-el
+-> telepíteni kell ng add @ngrx/effects
+*/
